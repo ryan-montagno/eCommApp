@@ -24,7 +24,7 @@ public class BootStrapData implements CommandLineRunner {
 
         if (productRepository.count() == 0) {
             System.out.println("Adding products...");
-            Product product = new Product("Sample Product", "This is a sample product.", 19.99);
+            Product product = new Product("Sample Product", "This is a sample product.", 19.99, "Sample");
             productRepository.save(product);
             System.out.println("Products saved successfully!");
         }
