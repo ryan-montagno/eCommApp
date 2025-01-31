@@ -2,13 +2,11 @@ package com.rmont.e_comm_app.entity;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Table(name = "products")
-@Data
 @Getter
 @Setter
 public class Product {
@@ -16,30 +14,36 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "product_id")
-    private Long productId;
+    private Long product_id;
+
 
     @Column(name = "product_name")
-    private String productName;
+    private String product_name;
+
 
     @Column(name = "product_desc")
-    private String productDesc;
+    private String product_desc;
+
 
     @Column(name = "product_price")
-    private double productPrice;
+    private double product_price;
+
 
     @Column(name = "product_tag")
-    private String productTag;
+    private String product_tag;
 
     public Product() {}
     public Product(String name, String description, double price, String tag)
     {
 
-        this.productName = name;
-        this.productDesc = description;
-        this.productPrice = price;
-        this.productTag = tag;
+        this.product_name = name;
+        this.product_desc = description;
+        this.product_price = price;
+        this.product_tag = tag;
 
     }
+
+
 
 
 
