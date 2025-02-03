@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.rmont.e_comm_app.Service.ProductService;
 import com.rmont.e_comm_app.entity.Product;
-import com.rmont.e_comm_app.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
