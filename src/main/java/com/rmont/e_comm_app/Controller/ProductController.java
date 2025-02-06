@@ -31,4 +31,20 @@ public class ProductController {
 
     }
 
+    @GetMapping ("/id")
+    public Product getProductById(String id) {
+
+        try {
+
+            int idInt = Integer.parseInt(id);
+            return productService.findById(idInt);
+
+        } catch (NumberFormatException e) {
+
+            System.out.println("ID must be a number.");
+            return null;
+
+        }
+    }
+
 }
