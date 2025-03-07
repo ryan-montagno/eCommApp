@@ -5,9 +5,7 @@ import java.util.List;
 import com.rmont.e_comm_app.Service.ProductService;
 import com.rmont.e_comm_app.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/products")
@@ -29,6 +27,11 @@ public class ProductController {
         System.out.println(products);
         return products;
 
+    }
+
+    @PostMapping
+    public void addProduct(@RequestBody Product product) {
+        productService.save(product);
     }
 
     @GetMapping ("/id")

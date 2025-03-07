@@ -7,13 +7,14 @@ CREATE TABLE `products` (
     `product_name` varchar(255) DEFAULT NULL,
     `product_desc` varchar(255) DEFAULT NULL,
     `product_price` decimal(19, 2) DEFAULT NULL,
-    `product_tag` varchar(255), 
+    `product_tag` varchar(255),
+    `image_url` varchar(255),
     PRIMARY KEY (`product_id`)
 );
 INSERT INTO `ecomm_app`.products 
-VALUES (1, 'Apple', 'A red fruit.', 1.76, 'food'),
-    (2, 'Baseball', 'A ball for baseball', 5.97, 'sports'),
-    (3, 'T-Shirt', 'A piece of clothing', 10.35, 'clothing');
+VALUES (1, 'Apple', 'A red fruit.', 1.76, 'food', '/product-images/apple.jpg'),
+    (2, 'Baseball', 'A ball for baseball', 5.97, 'sports', '/product-images/tshirt.jpg'),
+    (3, 'T-Shirt', 'A piece of clothing', 10.35, 'clothing', '/product-images/baseball.jpg');
 
 DROP TABLE IF EXISTS `customers`;
 CREATE TABLE `customers` (

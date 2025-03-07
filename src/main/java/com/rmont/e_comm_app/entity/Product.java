@@ -32,14 +32,18 @@ public class Product {
     @Column(name = "product_tag")
     private String product_tag;
 
+    @Column(name = "image_url")
+    private String image_url;
+
     public Product() {}
-    public Product(String name, String description, double price, String tag)
+    public Product(String name, String description, double price, String tag, String imageUrl)
     {
 
         this.product_name = name;
         this.product_desc = description;
         this.product_price = price;
         this.product_tag = tag;
+        this.image_url = imageUrl;
 
     }
 
