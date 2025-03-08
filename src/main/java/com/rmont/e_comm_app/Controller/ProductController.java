@@ -50,4 +50,11 @@ public class ProductController {
         }
     }
 
+    @GetMapping("/tag")
+    public List<Product> getProductByTag(String tag) {
+
+        return productService.findByTag(tag);
+
+    }
+
 }

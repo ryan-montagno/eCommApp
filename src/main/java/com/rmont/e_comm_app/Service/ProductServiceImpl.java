@@ -4,6 +4,7 @@ import com.rmont.e_comm_app.entity.Product;
 import com.rmont.e_comm_app.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,6 +36,22 @@ public class ProductServiceImpl implements ProductService {
         }
 
 
+    }
+
+    @Override
+    public List<Product> findByTag(String tag) {
+        String theTag = tag.toLowerCase();
+
+        List<Product> theList = productRepository.findAll();
+        List<Product> resultList = new ArrayList<>();
+        for (Product product : theList) {
+            if (product.getProduct_tag().toLowerCase().equals(theTag)) {
+                resultList.add(product);
+            }
+
+        }
+
+        return resultList;
     }
 
     @Override

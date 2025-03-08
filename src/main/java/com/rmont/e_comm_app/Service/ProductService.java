@@ -10,6 +10,8 @@ public interface ProductService {
 
     public Product findById(int id);
 
+    public List<Product> findByTag(String tag);
+
     public void save(Product product);
 
 }
