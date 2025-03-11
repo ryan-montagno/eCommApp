@@ -13,8 +13,13 @@ CREATE TABLE `products` (
 );
 INSERT INTO `ecomm_app`.products 
 VALUES (1, 'Apple', 'A red fruit.', 1.76, 'food', '/product-images/apple.jpg'),
-    (2, 'Baseball', 'A ball for baseball', 5.97, 'sports', '/product-images/tshirt.jpg'),
-    (3, 'T-Shirt', 'A piece of clothing', 10.35, 'clothing', '/product-images/baseball.jpg');
+    (2, 'Baseball', 'A ball for baseball', 5.97, 'sports', '/product-images/baseball.jpg'),
+    (3, 'T-Shirt', 'A piece of clothing', 10.35, 'clothing', '/product-images/tshirt.jpg'),
+    (4, 'Bike', 'A bicycle to ride.', 120.38, 'sports', 'product-images/bike.jpg'),
+    (5, 'Orange', 'Good for juice.', 4.30, 'food', 'product-images/orange.jpg'),
+    (6, 'Pants', 'A comfy pair of pants..', 60.56, 'clothing', 'product-images/pants.jpg'),
+    (7, 'Hammer', 'A good hammer.', 738.34, 'tools', 'product-images/hammer.jpg'),
+    (8, 'Football', 'Go Birds!.', 56.38, 'sports', 'product-images/football.jpg');
 
 DROP TABLE IF EXISTS `customers`;
 CREATE TABLE `customers` (
