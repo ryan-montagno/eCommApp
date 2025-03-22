@@ -50,10 +50,10 @@ public class ProductController {
         }
     }
 
-    @GetMapping("/tag")
-    public List<Product> getProductByTag(String tag) {
+    @GetMapping("/search")
+    public List<Product> getProductByTag(String searchTerm) {
 
-        return productService.findByTag(tag);
+        return productService.findByTag(searchTerm);
 
     }
 
