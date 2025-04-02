@@ -5,6 +5,7 @@ import java.util.List;
 import com.rmont.e_comm_app.Service.ProductService;
 import com.rmont.e_comm_app.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -32,6 +33,16 @@ public class ProductController {
     @PostMapping
     public void addProduct(@RequestBody Product product) {
         productService.save(product);
+    }
+
+    @RequestMapping(value = "/api/products/{id}", method = RequestMethod.OPTIONS)
+    public ResponseEntity<Void> handleOptionsRequest() {
+        return ResponseEntity.ok().build(); // This will respond to the preflight OPTIONS request
+    }
+
+    @DeleteMapping("/api/products/{id}")
+    public void deleteProduct(@PathVariable int id) {
+        productService.deleteById(id);
     }
 
     @GetMapping ("/id")
