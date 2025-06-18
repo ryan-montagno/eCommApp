@@ -40,10 +40,11 @@ public class ProductController {
         return ResponseEntity.ok().build(); // This will respond to the preflight OPTIONS request
     }
 
-    @DeleteMapping("/api/products/{id}")
+    @DeleteMapping("/{id}")
     public void deleteProduct(@PathVariable int id) {
         productService.deleteById(id);
     }
+
 
     @GetMapping ("/id")
     public Product getProductById(String id) {
