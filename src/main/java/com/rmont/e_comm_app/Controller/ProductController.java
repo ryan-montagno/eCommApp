@@ -46,13 +46,12 @@ public class ProductController {
     }
 
 
-    @GetMapping ("/id")
-    public Product getProductById(String id) {
+    @GetMapping ("/findByID/{id}")
+    public Product getProductById(@PathVariable int id) {
 
         try {
 
-            int idInt = Integer.parseInt(id);
-            return productService.findById(idInt);
+            return productService.findById(id);
 
         } catch (NumberFormatException e) {
 
